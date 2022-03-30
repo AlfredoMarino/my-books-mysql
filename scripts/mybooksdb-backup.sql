@@ -27,7 +27,7 @@ CREATE TABLE `author` (
   `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`author_id`),
   UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,6 +42,7 @@ INSERT INTO `author` VALUES (13,'Edgar Allan Poe');
 INSERT INTO `author` VALUES (8,'George R.R. Martin');
 INSERT INTO `author` VALUES (4,'H. P. Lovecraft');
 INSERT INTO `author` VALUES (14,'Ibéyise Pacheco');
+INSERT INTO `author` VALUES (15,'J. D. Salinger');
 INSERT INTO `author` VALUES (2,'J. K. Rowling');
 INSERT INTO `author` VALUES (11,'Jean Cocteau');
 INSERT INTO `author` VALUES (10,'John Grisham');
@@ -71,7 +72,7 @@ CREATE TABLE `book` (
   `isbn13` varchar(13) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `google_id` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`book_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,6 +99,7 @@ INSERT INTO `book` VALUES (15,'Joyland',NULL,'Life is Not Always a Butcher\'s Ga
 INSERT INTO `book` VALUES (16,'Cuentos Completos',NULL,'<p>El autor norteamericano Edgar Allan Poe (1809-1849) ocupa un lugar relevante en el panteón de los escritores más admirados, imitados y estudiados de la literatura universal. Considerado por muchos como un precursor del cuento corto y de terror como género literario, Edgar Allan Poe escribió también poesía, ensayos y crítica literaria. Fascinado con lo macabro y con un especial talento para ello, Poe también exploró diversos temas y tonos en su obra, con relatos detectivescos, humorísticos, históricos y hasta crónicas periodísticas. Su obra ha inspirado innumerables homenajes e influenciado el estilo de autores como H. P. Lovecraft y Arthur Conan Doyle.</p><p>Con una vida marcada por la tragedia Poe logró dejar una huella indeleble en la historia literaria de su país y del mundo, como un maestro de la naturaleza humana y de todos sus matices. El presente volumen contiene más de sesenta cuentos, reuniendo todos los relatos publicados durante su vida.</p>','2020-04-01','http://books.google.com/books/publisher/content?id=ygjeDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72re340LgOJSh3T5rx-0RTVw4vkhyv-MZrGdP8gCXgXZp8k2oIzXWfOmngOxJ1z1DnQq8S7mvAOWoFAX8n8xcfFb-EZ758_aAiqMn12vzaYKOssH5SNfFSbbwSniREDTJzeUJn-&source=gbs_api','8418211172','9788418211171','ygjeDwAAQBAJ');
 INSERT INTO `book` VALUES (17,'La tormenta del siglo',NULL,'<p><b>La tormenta del siglo no solo trae consigo vientos huracanados y copiosas nevadas, sino también algo mucho peor...</b></p> <p>Por primera vez, Stephen King nos presenta un relato escrito expresamente para la televisión.</p> <p>La llaman «la tormenta del siglo» y se estima que será devastadora. Los habitantes de la isla de Little Tall ya han sido testigos de las violentas tormentas que azotan Maine, pero esta es distinta. No solo trae consigo vientos huracanados y copiosas nevadas, sino también algo mucho peor. Algo que ni siquiera los isleños han visto jamás. Algo que nadie quiere ver...</p> <p>Todo origina con la brutal muerte de un anciano y con la implacable exigencia del asesino: «Si me dais lo que quiero, me marcharé.»</p> <p><b>La crítica ha dicho...</b><br>«Stephen King: un gran escritor.»<br><i>El País</i></p>','2013-05-23','http://books.google.com/books/content?id=IEr5fUr7DnYC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70uhlInqtN2_RQSPB5eCKhvULUXi7n6xRtoScwZirdsDHH87bq_ZwMDON4swo-ohUI7tp1ofZIc73RTcmvugC57X4E4rhidiWUmGnZr6As6UI9YwoHuVIms3mU1eHvM0I_jWBxb&source=gbs_api','8490326207','9788490326206','IEr5fUr7DnYC');
 INSERT INTO `book` VALUES (18,'Sangre en el diván',NULL,'<p>Edmundo Chirinos, reconocido psiquiatra de trayectoria pública, es acusado por el asesinato de Roxana Vargas. Ibéyise Pacheco tuvo la oportunidad de entrevistar en numerosas ocasiones a los implicados y relacionados con el caso, y en especial al doctor Chirinos. Con la acuciosidad de la periodista incisiva que es Ibéyise, el juicio será el escenario de partida de este profundo trabajo de investigación que construye y da cuenta de la personalidad enigmática de Chirinos, la truculencia del caso, los testimonios dramáticos de las víctimas, los archivos de la fiscalía, y en grado mayor los encuentros con el doctor en los que la periodista interroga, deja hablar, persuade, y en ese forcejeo se revela la retorcida y decadente brillantez del doctor. <br> <br> Ibéyise no elude las escenas más crudas, deja que lo explícito se muestre y mientras, como telón de fondo, un acercamiento al carácter nacional, quizás dislocado, quebrado psíquicamente. El estilo de Ibéyise es preciso, apunta al dato, no deja cabos sueltos y resuelve en la sentencia el suspenso de reportaje que deviene relato</p>','2017-02-27','http://books.google.com/books/publisher/content?id=wZbCDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71o2uBgBc8En8GO7TDXBHkXXlVjRUOGm6zCs43g8GZ8NcEh_unYi3h6BHCQ9vn6DO9qsh9sUyyQcrFyPX-WqXddSzJFZAgOLjoEQC5FMFKCulrr1FwmHAtBM42tcMSJs992lGky&source=gbs_api','9584257862','9789584257864','wZbCDgAAQBAJ');
+INSERT INTO `book` VALUES (19,'El Guardian Entre El Centeno',NULL,'\"Si un cuerpo encuentra a otro cuerpo cuando van entre el centeno, muchas veces me imagino que hay un montón de niños jugando en un campo de centeno. Miles de niños, y están solos, quiero decir que no hay nadie mayor vigilándolos. Sólo yo. Estoy al borde del precipicio y mi trabajo consiste en evitar que los niños caigan en él. En cuanto empiezan a correr sin mirar adónde van, yo salgo de donde esté y los cojo. Eso es lo que me gustaría hacer todo el tiempo. Yo sería el guardián entre el centeno\"\"No importa que la sensación sea triste o hasta desagradable, pero cuando me voy de un sitio me gusta darme cuenta de que me marcho. Si no luego me da más pena todavía\"','2015-03-26','http://books.google.com/books/content?id=QVRCrgEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70rwNPcO1UlDVUhz0H6Bnx2je2BZYq6YoOmMY9EOyDeUVtb41uS9q4UKsgc4B52gCCFDr9yN2EhPoWbJDw4906eNe48PAoMmgs04MWprgecKiEtQ5CDyPmW5TM_AraoBooQFhYG&source=gbs_api','1511464666','9781511464666','QVRCrgEACAAJ');
 /*!40000 ALTER TABLE `book` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -502,6 +504,7 @@ INSERT INTO `library` VALUES (1,15,'2021-12-28','2021-12-28',95,1886,95,1886,8.7
 INSERT INTO `library` VALUES (1,16,'2021-12-28','2021-12-28',95,1886,95,1886,8,NULL,'2021-12-28 16:31:54');
 INSERT INTO `library` VALUES (1,17,'2021-12-28','2021-12-28',95,1886,95,1886,5,NULL,'2021-12-28 16:36:54');
 INSERT INTO `library` VALUES (1,18,'2021-12-28','2021-12-28',95,1886,95,1886,7.9,NULL,'2021-12-28 16:40:04');
+INSERT INTO `library` VALUES (1,19,'2022-03-30','2022-03-30',95,1886,95,1886,6.3,NULL,'2022-03-30 16:36:46');
 /*!40000 ALTER TABLE `library` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2644,6 +2647,7 @@ INSERT INTO `written` VALUES (15,12);
 INSERT INTO `written` VALUES (17,12);
 INSERT INTO `written` VALUES (16,13);
 INSERT INTO `written` VALUES (18,14);
+INSERT INTO `written` VALUES (19,15);
 /*!40000 ALTER TABLE `written` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -2656,4 +2660,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-28 17:54:38
+-- Dump completed on 2022-03-30 16:49:46
