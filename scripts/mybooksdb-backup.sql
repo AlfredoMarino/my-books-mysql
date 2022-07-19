@@ -72,7 +72,7 @@ CREATE TABLE `book` (
   `isbn13` varchar(13) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `google_id` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`book_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -100,6 +100,7 @@ INSERT INTO `book` VALUES (16,'Cuentos Completos',NULL,'<p>El autor norteamerica
 INSERT INTO `book` VALUES (17,'La tormenta del siglo',NULL,'<p><b>La tormenta del siglo no solo trae consigo vientos huracanados y copiosas nevadas, sino también algo mucho peor...</b></p> <p>Por primera vez, Stephen King nos presenta un relato escrito expresamente para la televisión.</p> <p>La llaman «la tormenta del siglo» y se estima que será devastadora. Los habitantes de la isla de Little Tall ya han sido testigos de las violentas tormentas que azotan Maine, pero esta es distinta. No solo trae consigo vientos huracanados y copiosas nevadas, sino también algo mucho peor. Algo que ni siquiera los isleños han visto jamás. Algo que nadie quiere ver...</p> <p>Todo origina con la brutal muerte de un anciano y con la implacable exigencia del asesino: «Si me dais lo que quiero, me marcharé.»</p> <p><b>La crítica ha dicho...</b><br>«Stephen King: un gran escritor.»<br><i>El País</i></p>','2013-05-23','http://books.google.com/books/content?id=IEr5fUr7DnYC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70uhlInqtN2_RQSPB5eCKhvULUXi7n6xRtoScwZirdsDHH87bq_ZwMDON4swo-ohUI7tp1ofZIc73RTcmvugC57X4E4rhidiWUmGnZr6As6UI9YwoHuVIms3mU1eHvM0I_jWBxb&source=gbs_api','8490326207','9788490326206','IEr5fUr7DnYC');
 INSERT INTO `book` VALUES (18,'Sangre en el diván',NULL,'<p>Edmundo Chirinos, reconocido psiquiatra de trayectoria pública, es acusado por el asesinato de Roxana Vargas. Ibéyise Pacheco tuvo la oportunidad de entrevistar en numerosas ocasiones a los implicados y relacionados con el caso, y en especial al doctor Chirinos. Con la acuciosidad de la periodista incisiva que es Ibéyise, el juicio será el escenario de partida de este profundo trabajo de investigación que construye y da cuenta de la personalidad enigmática de Chirinos, la truculencia del caso, los testimonios dramáticos de las víctimas, los archivos de la fiscalía, y en grado mayor los encuentros con el doctor en los que la periodista interroga, deja hablar, persuade, y en ese forcejeo se revela la retorcida y decadente brillantez del doctor. <br> <br> Ibéyise no elude las escenas más crudas, deja que lo explícito se muestre y mientras, como telón de fondo, un acercamiento al carácter nacional, quizás dislocado, quebrado psíquicamente. El estilo de Ibéyise es preciso, apunta al dato, no deja cabos sueltos y resuelve en la sentencia el suspenso de reportaje que deviene relato</p>','2017-02-27','http://books.google.com/books/publisher/content?id=wZbCDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71o2uBgBc8En8GO7TDXBHkXXlVjRUOGm6zCs43g8GZ8NcEh_unYi3h6BHCQ9vn6DO9qsh9sUyyQcrFyPX-WqXddSzJFZAgOLjoEQC5FMFKCulrr1FwmHAtBM42tcMSJs992lGky&source=gbs_api','9584257862','9789584257864','wZbCDgAAQBAJ');
 INSERT INTO `book` VALUES (19,'El Guardian Entre El Centeno',NULL,'\"Si un cuerpo encuentra a otro cuerpo cuando van entre el centeno, muchas veces me imagino que hay un montón de niños jugando en un campo de centeno. Miles de niños, y están solos, quiero decir que no hay nadie mayor vigilándolos. Sólo yo. Estoy al borde del precipicio y mi trabajo consiste en evitar que los niños caigan en él. En cuanto empiezan a correr sin mirar adónde van, yo salgo de donde esté y los cojo. Eso es lo que me gustaría hacer todo el tiempo. Yo sería el guardián entre el centeno\"\"No importa que la sensación sea triste o hasta desagradable, pero cuando me voy de un sitio me gusta darme cuenta de que me marcho. Si no luego me da más pena todavía\"','2015-03-26','http://books.google.com/books/content?id=QVRCrgEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70rwNPcO1UlDVUhz0H6Bnx2je2BZYq6YoOmMY9EOyDeUVtb41uS9q4UKsgc4B52gCCFDr9yN2EhPoWbJDw4906eNe48PAoMmgs04MWprgecKiEtQ5CDyPmW5TM_AraoBooQFhYG&source=gbs_api','1511464666','9781511464666','QVRCrgEACAAJ');
+INSERT INTO `book` VALUES (20,'La Sangre Manda',NULL,'<b>Una irresistible colección de cuatro novelas cortas sobre las fuerzas ocultas que nos acechan, por el maestro indiscutible del terror.<br></b><br> \"En enero de 2021, llega un pequeño sobre acolchado a nombre del inspector Ralph Anderson a casa de los Conrad, vecinos de los Anderson. La familia Anderson disfruta de unas largas vacaciones en las Bahamas. Los Conrad accedieron a reenviarles la correspondencia hasta su regreso a Flint City, pero este sobre lleva escrito en letras grandes: NO REENVIAR, ENTREGAR A SU LLEGADA. Cuando Ralph abre el paquete, encuentra una memoria USB con el título <i>La sangre manda.</i> El USB contiene una especie de informe, o diario oral, de Holly Gibney, con quien el inspector compartió un caso que empezó en Oklahoma y terminó en una cueva de Texas. Ese caso cambió para siempre la percepción de la realidad de Ralph Anderson. Las últimas palabras del informe oral de Holly son del 19 de diciembre de 2020. Parece sin aliento. \'Lo he hecho lo mejor que he podido, Ralph, pero puede que no baste. Pese a haberlo planeado todo con detalle, cabe la posibilidad de que no salga viva de esto. De ser así, necesito que sepas lo mucho que ha significado para mí tu amistad. Si muero, y decides continuar con lo que he empezado, por favor, ten cuidado. Tú tienes mujer y un hijo\'\".<br> <br> En \"El teléfono del señor Harrigan\", \"La vida de Chuck\", \"La sangre manda\" y \"La rata\", Stephen King sorprende nuevamente a sus lectores, llevándolos a lugares intrigantes, inesperados y aterradores.','2020-07-28','http://books.google.com/books/publisher/content?id=t1D4DwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE736kE_D4LB-HAyDHIvezvdS8LWBtBk15B7NDMrF1xIk0HncODFBTNSizD-qdG-IgTGGI3LTb6pZ5acV8m7Wf5nZqVA-OAaXdNfQN8ujSlez6eDUeEIRUN1LzF3BENqUlCHPnBuS&source=gbs_api','0593311523','9780593311523','t1D4DwAAQBAJ');
 /*!40000 ALTER TABLE `book` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -141,6 +142,7 @@ INSERT INTO `categorize` VALUES (5,7);
 INSERT INTO `categorize` VALUES (14,7);
 INSERT INTO `categorize` VALUES (16,7);
 INSERT INTO `categorize` VALUES (17,7);
+INSERT INTO `categorize` VALUES (20,7);
 INSERT INTO `categorize` VALUES (6,8);
 INSERT INTO `categorize` VALUES (6,9);
 INSERT INTO `categorize` VALUES (18,9);
@@ -160,8 +162,10 @@ INSERT INTO `categorize` VALUES (11,18);
 INSERT INTO `categorize` VALUES (13,18);
 INSERT INTO `categorize` VALUES (14,18);
 INSERT INTO `categorize` VALUES (16,18);
+INSERT INTO `categorize` VALUES (20,18);
 INSERT INTO `categorize` VALUES (15,19);
 INSERT INTO `categorize` VALUES (16,20);
+INSERT INTO `categorize` VALUES (20,21);
 /*!40000 ALTER TABLE `categorize` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -176,7 +180,7 @@ CREATE TABLE `category` (
   `category_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -205,6 +209,7 @@ INSERT INTO `category` VALUES (17,'FICTION / Psychological');
 INSERT INTO `category` VALUES (18,'Fiction / Thrillers / Suspense');
 INSERT INTO `category` VALUES (19,'Fiction / Mystery & Detective / General');
 INSERT INTO `category` VALUES (20,'Fiction / Gothic');
+INSERT INTO `category` VALUES (21,'Fiction / Thrillers / Psychological');
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -505,6 +510,7 @@ INSERT INTO `library` VALUES (1,16,'2021-12-28','2021-12-28',95,1886,95,1886,8,N
 INSERT INTO `library` VALUES (1,17,'2021-12-28','2021-12-28',95,1886,95,1886,5,NULL,'2021-12-28 16:36:54');
 INSERT INTO `library` VALUES (1,18,'2021-12-28','2021-12-28',95,1886,95,1886,7.9,NULL,'2021-12-28 16:40:04');
 INSERT INTO `library` VALUES (1,19,'2022-03-30','2022-03-30',95,1886,95,1886,6.3,NULL,'2022-03-30 16:36:46');
+INSERT INTO `library` VALUES (1,20,'2022-07-19','2022-07-19',95,1886,95,1886,4.2,NULL,'2022-07-19 20:34:14');
 /*!40000 ALTER TABLE `library` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2645,6 +2651,7 @@ INSERT INTO `written` VALUES (13,12);
 INSERT INTO `written` VALUES (14,12);
 INSERT INTO `written` VALUES (15,12);
 INSERT INTO `written` VALUES (17,12);
+INSERT INTO `written` VALUES (20,12);
 INSERT INTO `written` VALUES (16,13);
 INSERT INTO `written` VALUES (18,14);
 INSERT INTO `written` VALUES (19,15);
@@ -2660,4 +2667,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-30 16:49:46
+-- Dump completed on 2022-07-19 20:46:35
