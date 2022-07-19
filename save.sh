@@ -9,23 +9,34 @@ echo
 
 echo "****************************************************************************************"
 echo "Finding my-books-database docker container..."
-databaseContainerId=$(docker ps -aqf "name=my-books-database")
+databaseContainerId=$(docker ps -qf "name=my-books-database")
 
-echo "Backup database from container" $databaseContainerId
-docker exec $databaseContainerId /usr/bin/mysqldump -u aamv --password=aamv --no-tablespaces --extended-insert=FALSE --add-drop-table mybooksdb > scripts/mybooksdb-backup.sql
+if [ -z "$databaseContainerId" ]
+then
+    echo
+    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    echo "my-books-database container not found!!"
+    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+else
 
-echo
-echo "****************************************************************************************"
-read -p "Set a git commit comment:" commitComment
+    echo "Backup database from container" $databaseContainerId
+    docker exec $databaseContainerId /usr/bin/mysqldump -u aamv --password=aamv --no-tablespaces --extended-insert=FALSE --add-drop-table mybooksdb > scripts/mybooksdb-backup.sql
 
-echo "git add ."
-git add .
+    echo
+    echo "****************************************************************************************"
+    read -p "Set a git commit comment:" commitComment
 
-echo "git status"
-git status 
+    echo "git add ."
+    git add .
 
-echo "git commit -m '$commitComment'"
-git commit -m "$commitComment"
+    echo "git status"
+    git status 
 
-echo "git push"
-git push
+    echo "git commit -m '$commitComment'"
+    git commit -m "$commitComment"
+
+    echo "git push"
+    git push
+
+fi
+
