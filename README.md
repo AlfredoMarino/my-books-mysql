@@ -6,11 +6,8 @@ This is the definition of the my-books-mysql image, which is the database of the
 
 ## Deploy
 
-If you want to make a backup of your database and include this data in the image, run this command and push to github
+If you want to make a backup of your database and include this data in the image, run the save.sh script
 
-```sh
-$ docker exec [CONTAINER ID] /usr/bin/mysqldump -u aamv --password=aamv --no-tablespaces --extended-insert=FALSE --add-drop-table mybooksdb > scripts/mybooksdb-backup.sql
-```
 
 ## Related projects
 
