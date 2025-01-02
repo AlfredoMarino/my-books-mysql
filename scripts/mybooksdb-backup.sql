@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.27, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.29, for Linux (x86_64)
 --
 -- Host: localhost    Database: mybooksdb
 -- ------------------------------------------------------
--- Server version	8.0.27
+-- Server version	8.0.29
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -24,10 +24,10 @@ DROP TABLE IF EXISTS `author`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `author` (
   `author_id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `name` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`author_id`),
   UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,6 +39,8 @@ LOCK TABLES `author` WRITE;
 INSERT INTO `author` VALUES (3,'Antoine de Saint-Exupéry');
 INSERT INTO `author` VALUES (6,'Barry Bateman');
 INSERT INTO `author` VALUES (13,'Edgar Allan Poe');
+INSERT INTO `author` VALUES (16,'Gabriel García Márquez');
+INSERT INTO `author` VALUES (17,'George Orwell');
 INSERT INTO `author` VALUES (8,'George R.R. Martin');
 INSERT INTO `author` VALUES (4,'H. P. Lovecraft');
 INSERT INTO `author` VALUES (14,'Ibéyise Pacheco');
@@ -63,16 +65,16 @@ DROP TABLE IF EXISTS `book`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `book` (
   `book_id` int NOT NULL AUTO_INCREMENT,
-  `title` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `subtitle` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
-  `description` text CHARACTER SET utf8 COLLATE utf8_spanish_ci,
+  `title` varchar(256) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci NOT NULL,
+  `subtitle` varchar(256) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci,
   `publication_date` date DEFAULT NULL,
-  `image` varchar(512) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `isbn10` varchar(10) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
-  `isbn13` varchar(13) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
-  `google_id` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `image` varchar(512) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci NOT NULL,
+  `isbn10` varchar(10) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `isbn13` varchar(13) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `google_id` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`book_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -101,6 +103,8 @@ INSERT INTO `book` VALUES (17,'La tormenta del siglo',NULL,'<p><b>La tormenta de
 INSERT INTO `book` VALUES (18,'Sangre en el diván',NULL,'<p>Edmundo Chirinos, reconocido psiquiatra de trayectoria pública, es acusado por el asesinato de Roxana Vargas. Ibéyise Pacheco tuvo la oportunidad de entrevistar en numerosas ocasiones a los implicados y relacionados con el caso, y en especial al doctor Chirinos. Con la acuciosidad de la periodista incisiva que es Ibéyise, el juicio será el escenario de partida de este profundo trabajo de investigación que construye y da cuenta de la personalidad enigmática de Chirinos, la truculencia del caso, los testimonios dramáticos de las víctimas, los archivos de la fiscalía, y en grado mayor los encuentros con el doctor en los que la periodista interroga, deja hablar, persuade, y en ese forcejeo se revela la retorcida y decadente brillantez del doctor. <br> <br> Ibéyise no elude las escenas más crudas, deja que lo explícito se muestre y mientras, como telón de fondo, un acercamiento al carácter nacional, quizás dislocado, quebrado psíquicamente. El estilo de Ibéyise es preciso, apunta al dato, no deja cabos sueltos y resuelve en la sentencia el suspenso de reportaje que deviene relato</p>','2017-02-27','http://books.google.com/books/publisher/content?id=wZbCDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71o2uBgBc8En8GO7TDXBHkXXlVjRUOGm6zCs43g8GZ8NcEh_unYi3h6BHCQ9vn6DO9qsh9sUyyQcrFyPX-WqXddSzJFZAgOLjoEQC5FMFKCulrr1FwmHAtBM42tcMSJs992lGky&source=gbs_api','9584257862','9789584257864','wZbCDgAAQBAJ');
 INSERT INTO `book` VALUES (19,'El Guardian Entre El Centeno',NULL,'\"Si un cuerpo encuentra a otro cuerpo cuando van entre el centeno, muchas veces me imagino que hay un montón de niños jugando en un campo de centeno. Miles de niños, y están solos, quiero decir que no hay nadie mayor vigilándolos. Sólo yo. Estoy al borde del precipicio y mi trabajo consiste en evitar que los niños caigan en él. En cuanto empiezan a correr sin mirar adónde van, yo salgo de donde esté y los cojo. Eso es lo que me gustaría hacer todo el tiempo. Yo sería el guardián entre el centeno\"\"No importa que la sensación sea triste o hasta desagradable, pero cuando me voy de un sitio me gusta darme cuenta de que me marcho. Si no luego me da más pena todavía\"','2015-03-26','http://books.google.com/books/content?id=QVRCrgEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70rwNPcO1UlDVUhz0H6Bnx2je2BZYq6YoOmMY9EOyDeUVtb41uS9q4UKsgc4B52gCCFDr9yN2EhPoWbJDw4906eNe48PAoMmgs04MWprgecKiEtQ5CDyPmW5TM_AraoBooQFhYG&source=gbs_api','1511464666','9781511464666','QVRCrgEACAAJ');
 INSERT INTO `book` VALUES (20,'La Sangre Manda',NULL,'<b>Una irresistible colección de cuatro novelas cortas sobre las fuerzas ocultas que nos acechan, por el maestro indiscutible del terror.<br></b><br> \"En enero de 2021, llega un pequeño sobre acolchado a nombre del inspector Ralph Anderson a casa de los Conrad, vecinos de los Anderson. La familia Anderson disfruta de unas largas vacaciones en las Bahamas. Los Conrad accedieron a reenviarles la correspondencia hasta su regreso a Flint City, pero este sobre lleva escrito en letras grandes: NO REENVIAR, ENTREGAR A SU LLEGADA. Cuando Ralph abre el paquete, encuentra una memoria USB con el título <i>La sangre manda.</i> El USB contiene una especie de informe, o diario oral, de Holly Gibney, con quien el inspector compartió un caso que empezó en Oklahoma y terminó en una cueva de Texas. Ese caso cambió para siempre la percepción de la realidad de Ralph Anderson. Las últimas palabras del informe oral de Holly son del 19 de diciembre de 2020. Parece sin aliento. \'Lo he hecho lo mejor que he podido, Ralph, pero puede que no baste. Pese a haberlo planeado todo con detalle, cabe la posibilidad de que no salga viva de esto. De ser así, necesito que sepas lo mucho que ha significado para mí tu amistad. Si muero, y decides continuar con lo que he empezado, por favor, ten cuidado. Tú tienes mujer y un hijo\'\".<br> <br> En \"El teléfono del señor Harrigan\", \"La vida de Chuck\", \"La sangre manda\" y \"La rata\", Stephen King sorprende nuevamente a sus lectores, llevándolos a lugares intrigantes, inesperados y aterradores.','2020-07-28','http://books.google.com/books/publisher/content?id=t1D4DwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE736kE_D4LB-HAyDHIvezvdS8LWBtBk15B7NDMrF1xIk0HncODFBTNSizD-qdG-IgTGGI3LTb6pZ5acV8m7Wf5nZqVA-OAaXdNfQN8ujSlez6eDUeEIRUN1LzF3BENqUlCHPnBuS&source=gbs_api','0593311523','9780593311523','t1D4DwAAQBAJ');
+INSERT INTO `book` VALUES (21,'Cien años de soledad',NULL,'<p> <b>Señalada como «catedral gótica del lenguaje», este clásico del siglo XX es el enorme y espléndido tapiz de la saga de la familia Buendía, en la mítica aldea de Macondo.</b> </p> <p> <p>UNO DE LOS 5 LIBROS MÁS IMPORTANTES DE LOS ÚLTIMOS 125 AÑOS SEGÚN <i>THE NEW YORK TIMES</i> </p> <p> <p> <b>Un referente imprescindible de la vida y la narrativa latinoamericana.</b> </p> <p> <i>«Muchos años después, frente al pelotón de fusilamiento, el coronel Aureliano Buendía había de recordar aquella tarde remota en que su padre lo llevó a conocer el hielo. Macondo era entonces una aldea de veinte casas de barro y cañabrava construidas a la orilla de un río de aguas diáfanas que se precipitaban por un lecho de piedras pulidas, blancas y enormes como huevos prehistóricos. El mundo era tan reciente, que muchas cosas carecían de nombre, y para mencionarlas había que señalarlas con el dedo».</i> </p> <p>Con estas palabras empieza la novela ya legendaria en los anales de la literatura universal, una de las aventuras literarias más fascinantes de nuestro siglo. Millones de ejemplares de <i>Cien años de soledad</i> leídos en todas las lenguas y el Premio Nobel de Literatura coronando una obra que se había abierto paso «boca a boca» -como gusta decir al escritor- son la más palpable demostración de que la aventura fabulosa de la familia Buendía-Iguarán, con sus milagros, fantasías, obsesiones, tragedias, incestos, adulterios, rebeldías, descubrimientos y condenas, representaba al mismo tiempo el mito y la historia, la tragedia y el amor del mundo entero.</p> <p> <b>Pablo Neruda dijo...</b> <br> «El Quijote de nuestro tiempo.»</p>','2015-12-03','http://books.google.com/books/publisher/content?id=kmAQCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73z8LjeMKT_Vd53YvWCjDZoSatYyetPo7ufHExbJX5KMTiKS5vPVcgsMneZf7FHiH4x4eEjafIEkH5zT0d_3h0BvtK1smVorC2qeu0cyz1sSGiRjbiS8eEDUREB1hqLi0MNkeVl&source=gbs_api','8439731760','9788439731764','kmAQCwAAQBAJ');
+INSERT INTO `book` VALUES (22,'1984',NULL,'&quot;1984&quot; es una novela distópica cautivadora que revela los peligros insidiosos de un gobierno totalitario y la vigilancia en masa. Con su crítica social y política impactante y perspicaz, esta obra maestra literaria ha resistido el paso del tiempo desde su publicación en 1949, convirtiéndose en un clásico indiscutible. Sumérgete en las páginas de esta inquietante historia y acompaña al protagonista, Winston Smith, en su desesperada lucha por preservar su humanidad en un mundo donde el Gran Hermano ejerce un control absoluto sobre cada faceta de la existencia. A medida que te adentres en estas páginas, te enfrentarás a cuestiones sociales y políticas complejas que siguen resonando en nuestra sociedad actual. Descubre la opresiva realidad de esta fascinante ficción distópica y deja que los temas como el pensamiento crítico, la manipulación psicológica y la libertad individual te envuelvan en una reflexión profunda.1984 es una novela distópica que explora los peligros del gobierno totalitario y la vigilancia en masa. Con su impactante crítica social y política, &quot;1984&quot; ha sido un clásico de la literatura desde su publicación en 1949. Los lectores seguirán la desgarradora lucha del protagonista, Winston Smith, por mantener su humanidad en un mundo donde el Gran Hermano controla cada aspecto de la vida. Descubre esta obra maestra de la ficción distópica y explora las complejas cuestiones sociales y políticas que aún resuenan hoy en día.','2023-01-06','http://books.google.com/books/publisher/content?id=fHm2EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70m8OQ-jXuUYvTW_mWl3cIjxbZBpYiyQixl2JTucxNh5TthQjwpvSAGtssga9mlMR31lyo56xUmPOOZMITrrBvCmB4h7zgzyEbLPpqG49OA2rgh26bVJYyHBfg-GFObKGhZqKZK&source=gbs_api','9877187604','9789877187601','fHm2EAAAQBAJ');
 /*!40000 ALTER TABLE `book` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -158,6 +162,7 @@ INSERT INTO `categorize` VALUES (8,15);
 INSERT INTO `categorize` VALUES (9,15);
 INSERT INTO `categorize` VALUES (9,16);
 INSERT INTO `categorize` VALUES (10,17);
+INSERT INTO `categorize` VALUES (22,17);
 INSERT INTO `categorize` VALUES (11,18);
 INSERT INTO `categorize` VALUES (13,18);
 INSERT INTO `categorize` VALUES (14,18);
@@ -166,6 +171,10 @@ INSERT INTO `categorize` VALUES (20,18);
 INSERT INTO `categorize` VALUES (15,19);
 INSERT INTO `categorize` VALUES (16,20);
 INSERT INTO `categorize` VALUES (20,21);
+INSERT INTO `categorize` VALUES (21,22);
+INSERT INTO `categorize` VALUES (21,23);
+INSERT INTO `categorize` VALUES (22,24);
+INSERT INTO `categorize` VALUES (22,25);
 /*!40000 ALTER TABLE `categorize` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -178,9 +187,9 @@ DROP TABLE IF EXISTS `category`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `category` (
   `category_id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `name` varchar(256) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -210,6 +219,10 @@ INSERT INTO `category` VALUES (18,'Fiction / Thrillers / Suspense');
 INSERT INTO `category` VALUES (19,'Fiction / Mystery & Detective / General');
 INSERT INTO `category` VALUES (20,'Fiction / Gothic');
 INSERT INTO `category` VALUES (21,'Fiction / Thrillers / Psychological');
+INSERT INTO `category` VALUES (22,'Fiction / Magical Realism');
+INSERT INTO `category` VALUES (23,'Fiction / Literary');
+INSERT INTO `category` VALUES (24,'Fiction / Dystopian');
+INSERT INTO `category` VALUES (25,'Fiction / Political');
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -222,7 +235,7 @@ DROP TABLE IF EXISTS `country`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `country` (
   `country_id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `name` varchar(256) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`country_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=247 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -467,7 +480,7 @@ CREATE TABLE `library` (
   `end_country_id` int NOT NULL,
   `end_region_id` int NOT NULL,
   `rating` double NOT NULL,
-  `note` text CHARACTER SET utf8 COLLATE utf8_spanish_ci,
+  `note` text CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci,
   `creation_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`book_id`,`person_id`),
   KEY `idperson` (`person_id`),
@@ -511,6 +524,8 @@ INSERT INTO `library` VALUES (1,17,'2021-12-28','2021-12-28',95,1886,95,1886,5,N
 INSERT INTO `library` VALUES (1,18,'2021-12-28','2021-12-28',95,1886,95,1886,7.9,NULL,'2021-12-28 16:40:04');
 INSERT INTO `library` VALUES (1,19,'2022-03-30','2022-03-30',95,1886,95,1886,6.3,NULL,'2022-03-30 16:36:46');
 INSERT INTO `library` VALUES (1,20,'2022-07-19','2022-07-19',95,1886,95,1886,4.2,NULL,'2022-07-19 20:34:14');
+INSERT INTO `library` VALUES (1,21,'2024-12-31','2024-12-31',95,1886,95,1886,9.1,NULL,'2024-12-31 14:27:54');
+INSERT INTO `library` VALUES (1,22,'2024-12-31','2024-12-31',95,1886,95,1886,10,NULL,'2024-12-31 15:16:26');
 /*!40000 ALTER TABLE `library` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -524,15 +539,15 @@ DROP TABLE IF EXISTS `person`;
 CREATE TABLE `person` (
   `person_id` int NOT NULL AUTO_INCREMENT,
   `user_id` int NOT NULL,
-  `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `last_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `name` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci NOT NULL,
+  `last_name` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci NOT NULL,
   `birthdate` date NOT NULL,
   `native_country_id` int NOT NULL,
   `native_region_id` int NOT NULL,
   `current_country_id` int NOT NULL,
   `current_region_id` int NOT NULL,
-  `about_me` text CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `photo` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `about_me` text CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci NOT NULL,
+  `photo` varchar(256) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`person_id`),
   UNIQUE KEY `iduser_2` (`user_id`),
   KEY `iduser` (`user_id`),
@@ -568,7 +583,7 @@ DROP TABLE IF EXISTS `region`;
 CREATE TABLE `region` (
   `region_id` int NOT NULL AUTO_INCREMENT,
   `country_id` int NOT NULL,
-  `name` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `name` varchar(256) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`region_id`),
   KEY `country` (`country_id`),
   CONSTRAINT `region_ibfk_1` FOREIGN KEY (`country_id`) REFERENCES `country` (`country_id`)
@@ -2592,8 +2607,8 @@ DROP TABLE IF EXISTS `user`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user` (
   `user_id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `password` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `username` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci NOT NULL,
+  `password` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci NOT NULL,
   `user_state` tinyint NOT NULL DEFAULT '1' COMMENT '1: Activo | 2: Inactivo',
   `creation_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`user_id`),
@@ -2655,6 +2670,8 @@ INSERT INTO `written` VALUES (20,12);
 INSERT INTO `written` VALUES (16,13);
 INSERT INTO `written` VALUES (18,14);
 INSERT INTO `written` VALUES (19,15);
+INSERT INTO `written` VALUES (21,16);
+INSERT INTO `written` VALUES (22,17);
 /*!40000 ALTER TABLE `written` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -2667,4 +2684,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-19 21:54:13
+-- Dump completed on 2025-01-02 23:42:54
