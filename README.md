@@ -8,6 +8,12 @@ This is the definition of the my-books-mysql image, which is the database of the
 
 If you want to make a backup of your database and include this data in the image, run the save.sh script
 
+## Save data
+
+```
+bash ./save.sh
+```
+
 
 ## Related projects
 

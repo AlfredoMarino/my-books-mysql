@@ -27,7 +27,7 @@ CREATE TABLE `author` (
   `name` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`author_id`),
   UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,6 +36,7 @@ CREATE TABLE `author` (
 
 LOCK TABLES `author` WRITE;
 /*!40000 ALTER TABLE `author` DISABLE KEYS */;
+INSERT INTO `author` VALUES (18,'Aldous Huxley');
 INSERT INTO `author` VALUES (3,'Antoine de Saint-Exupéry');
 INSERT INTO `author` VALUES (6,'Barry Bateman');
 INSERT INTO `author` VALUES (13,'Edgar Allan Poe');
@@ -43,6 +44,7 @@ INSERT INTO `author` VALUES (16,'Gabriel García Márquez');
 INSERT INTO `author` VALUES (17,'George Orwell');
 INSERT INTO `author` VALUES (8,'George R.R. Martin');
 INSERT INTO `author` VALUES (4,'H. P. Lovecraft');
+INSERT INTO `author` VALUES (19,'Hermann Hesse');
 INSERT INTO `author` VALUES (14,'Ibéyise Pacheco');
 INSERT INTO `author` VALUES (15,'J. D. Salinger');
 INSERT INTO `author` VALUES (2,'J. K. Rowling');
@@ -74,7 +76,7 @@ CREATE TABLE `book` (
   `isbn13` varchar(13) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci DEFAULT NULL,
   `google_id` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`book_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,6 +107,8 @@ INSERT INTO `book` VALUES (19,'El Guardian Entre El Centeno',NULL,'\"Si un cuerp
 INSERT INTO `book` VALUES (20,'La Sangre Manda',NULL,'<b>Una irresistible colección de cuatro novelas cortas sobre las fuerzas ocultas que nos acechan, por el maestro indiscutible del terror.<br></b><br> \"En enero de 2021, llega un pequeño sobre acolchado a nombre del inspector Ralph Anderson a casa de los Conrad, vecinos de los Anderson. La familia Anderson disfruta de unas largas vacaciones en las Bahamas. Los Conrad accedieron a reenviarles la correspondencia hasta su regreso a Flint City, pero este sobre lleva escrito en letras grandes: NO REENVIAR, ENTREGAR A SU LLEGADA. Cuando Ralph abre el paquete, encuentra una memoria USB con el título <i>La sangre manda.</i> El USB contiene una especie de informe, o diario oral, de Holly Gibney, con quien el inspector compartió un caso que empezó en Oklahoma y terminó en una cueva de Texas. Ese caso cambió para siempre la percepción de la realidad de Ralph Anderson. Las últimas palabras del informe oral de Holly son del 19 de diciembre de 2020. Parece sin aliento. \'Lo he hecho lo mejor que he podido, Ralph, pero puede que no baste. Pese a haberlo planeado todo con detalle, cabe la posibilidad de que no salga viva de esto. De ser así, necesito que sepas lo mucho que ha significado para mí tu amistad. Si muero, y decides continuar con lo que he empezado, por favor, ten cuidado. Tú tienes mujer y un hijo\'\".<br> <br> En \"El teléfono del señor Harrigan\", \"La vida de Chuck\", \"La sangre manda\" y \"La rata\", Stephen King sorprende nuevamente a sus lectores, llevándolos a lugares intrigantes, inesperados y aterradores.','2020-07-28','http://books.google.com/books/publisher/content?id=t1D4DwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE736kE_D4LB-HAyDHIvezvdS8LWBtBk15B7NDMrF1xIk0HncODFBTNSizD-qdG-IgTGGI3LTb6pZ5acV8m7Wf5nZqVA-OAaXdNfQN8ujSlez6eDUeEIRUN1LzF3BENqUlCHPnBuS&source=gbs_api','0593311523','9780593311523','t1D4DwAAQBAJ');
 INSERT INTO `book` VALUES (21,'Cien años de soledad',NULL,'<p> <b>Señalada como «catedral gótica del lenguaje», este clásico del siglo XX es el enorme y espléndido tapiz de la saga de la familia Buendía, en la mítica aldea de Macondo.</b> </p> <p> <p>UNO DE LOS 5 LIBROS MÁS IMPORTANTES DE LOS ÚLTIMOS 125 AÑOS SEGÚN <i>THE NEW YORK TIMES</i> </p> <p> <p> <b>Un referente imprescindible de la vida y la narrativa latinoamericana.</b> </p> <p> <i>«Muchos años después, frente al pelotón de fusilamiento, el coronel Aureliano Buendía había de recordar aquella tarde remota en que su padre lo llevó a conocer el hielo. Macondo era entonces una aldea de veinte casas de barro y cañabrava construidas a la orilla de un río de aguas diáfanas que se precipitaban por un lecho de piedras pulidas, blancas y enormes como huevos prehistóricos. El mundo era tan reciente, que muchas cosas carecían de nombre, y para mencionarlas había que señalarlas con el dedo».</i> </p> <p>Con estas palabras empieza la novela ya legendaria en los anales de la literatura universal, una de las aventuras literarias más fascinantes de nuestro siglo. Millones de ejemplares de <i>Cien años de soledad</i> leídos en todas las lenguas y el Premio Nobel de Literatura coronando una obra que se había abierto paso «boca a boca» -como gusta decir al escritor- son la más palpable demostración de que la aventura fabulosa de la familia Buendía-Iguarán, con sus milagros, fantasías, obsesiones, tragedias, incestos, adulterios, rebeldías, descubrimientos y condenas, representaba al mismo tiempo el mito y la historia, la tragedia y el amor del mundo entero.</p> <p> <b>Pablo Neruda dijo...</b> <br> «El Quijote de nuestro tiempo.»</p>','2015-12-03','http://books.google.com/books/publisher/content?id=kmAQCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73z8LjeMKT_Vd53YvWCjDZoSatYyetPo7ufHExbJX5KMTiKS5vPVcgsMneZf7FHiH4x4eEjafIEkH5zT0d_3h0BvtK1smVorC2qeu0cyz1sSGiRjbiS8eEDUREB1hqLi0MNkeVl&source=gbs_api','8439731760','9788439731764','kmAQCwAAQBAJ');
 INSERT INTO `book` VALUES (22,'1984',NULL,'&quot;1984&quot; es una novela distópica cautivadora que revela los peligros insidiosos de un gobierno totalitario y la vigilancia en masa. Con su crítica social y política impactante y perspicaz, esta obra maestra literaria ha resistido el paso del tiempo desde su publicación en 1949, convirtiéndose en un clásico indiscutible. Sumérgete en las páginas de esta inquietante historia y acompaña al protagonista, Winston Smith, en su desesperada lucha por preservar su humanidad en un mundo donde el Gran Hermano ejerce un control absoluto sobre cada faceta de la existencia. A medida que te adentres en estas páginas, te enfrentarás a cuestiones sociales y políticas complejas que siguen resonando en nuestra sociedad actual. Descubre la opresiva realidad de esta fascinante ficción distópica y deja que los temas como el pensamiento crítico, la manipulación psicológica y la libertad individual te envuelvan en una reflexión profunda.1984 es una novela distópica que explora los peligros del gobierno totalitario y la vigilancia en masa. Con su impactante crítica social y política, &quot;1984&quot; ha sido un clásico de la literatura desde su publicación en 1949. Los lectores seguirán la desgarradora lucha del protagonista, Winston Smith, por mantener su humanidad en un mundo donde el Gran Hermano controla cada aspecto de la vida. Descubre esta obra maestra de la ficción distópica y explora las complejas cuestiones sociales y políticas que aún resuenan hoy en día.','2023-01-06','http://books.google.com/books/publisher/content?id=fHm2EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70m8OQ-jXuUYvTW_mWl3cIjxbZBpYiyQixl2JTucxNh5TthQjwpvSAGtssga9mlMR31lyo56xUmPOOZMITrrBvCmB4h7zgzyEbLPpqG49OA2rgh26bVJYyHBfg-GFObKGhZqKZK&source=gbs_api','9877187604','9789877187601','fHm2EAAAQBAJ');
+INSERT INTO `book` VALUES (23,'Un mundo feliz / Brave New World',NULL,'Un mundo feliz es un clásico de la literatura de este siglo. Con ironía mordiente, el genial autor inglés plasma una sombría metáfora sobre el futuro, muchas de cuyas previsiones se han materializado, acelerada e inquietantemente, en los últimos años. La novela describe un mundo en el que finalmente se han cumplido los peores vaticinios: triunfan los dioses del consumo y la comodidad, y el orbe se organiza en diez zonas en apariencia seguras y estables. Sin embargo, este mundo ha sacrificado valores humanos esenciales, y sus habitantes son procreados in vitro a imagen y semejanza de una cadena de montaje... <br><br><b>ENGLISH DESCRIPTION</b> <br><br>Aldous Huxley is rightly considered a prophetic genius and one of the most important literary and philosophical voices of the 20th Century, and Brave New World is his masterpiece. From the author of The Doors of Perception, Island, and countless other works of fiction, non-fiction, philosophy, and poetry, comes this powerful work of speculative fiction that has enthralled and terrified readers for generations. Brave New World remains absolutely relevant to this day as both a cautionary dystopian tale in the vein of the George Orwell classic 1984, and as thought-provoking, thoroughly satisfying entertainment.','2013-10-29','http://books.google.com/books/publisher/content?id=SnWREAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70XtGQu6vMoMl8iJJ2nV7iQ4g3E1KPHk9dzlmcdy8jIvakf8-UFyoirgsLX--Pk-de7fRHsAPa9IcPGaJA6W01U3XDJc996cdewDPk6fEHCHCJT5ZB0zilHJKFdUvGyMhUirxgE&source=gbs_api','8497594258','9788497594257','SnWREAAAQBAJ');
+INSERT INTO `book` VALUES (24,'El lobo estepario',NULL,'<p>«Por primera vez en mucho tiempo, \"El lobo Estepario\" volvió a enseñarme <br> lo que significa leer». Thomas Mann <br> </p> <br> <p>Detrás del aspecto descuidado y enfermizo del autor Harry Haller se <br> esconde una naturaleza sumamente sensible y despierta. El mismo elige <br> llamarse Lobo Estepario, ya que se siente fuera del mundo burgués que lo <br> rodea: un mundo que odia y desprecia pero que, a la vez, no puede <br> abandonar. <br> Por eso alquila una habitación en la vivienda pulcra de una señora mayor <br> y trata de convivir con inquilinas que cuidaba sus plantas y hombres que <br> van puntualmente a trabajar. Pero ese orden lo ahoga y una fuerza oscura <br> lo obliga a salir, a perseguir su búsqueda incansable de una vida más <br> auténtica e intensa. <br> Al narrar sus peripecias -«en un intento de superar la gran enfermedad <br> de estos tiempos»-, Harry Haller da una lección magistral sobre <br> libertad, sobre la anulación de los opuestos y de los conflictos, sobre <br> el poder salvador del humor. Y no lo hace a través de rodeos o <br> simplificaciones, sino «tratando de convertir la enfermedad en el objeto <br> mismo de la representación». <br> En todas las épocas hay personas demasiado sensibles, que sufren su <br> soledad y se sienten arrancadas de toda protección y toda inocencia. <br> Hermann Hesse crea un viaje fascinante, embriagador, a través de este <br> aspecto tormentoso de muchos seres humanos, que se ha vuelto más actual <br> que nunca. Lectores de todas las generaciones lo han agradecido y <br> seguirán haciéndolo. <br> </p>','2012-12-01','http://books.google.com/books/content?id=S2Q-1bKIQ5oC&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72qL5Bf8TqTKrh9CNjTzbYCeIB-rLyDRgnq1JwZZggVBwFzbwOfd2U5tahC_va8Y5SePF8TXHQFj63mxWY7EPXs2kB2gF2RyxMVfdoFCOWu6F2HZinU6ue539amf6yO3b2xHDxf&source=gbs_api','9500741105','9789500741101','S2Q-1bKIQ5oC');
 /*!40000 ALTER TABLE `book` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,6 +146,7 @@ INSERT INTO `categorize` VALUES (4,6);
 INSERT INTO `categorize` VALUES (5,6);
 INSERT INTO `categorize` VALUES (12,6);
 INSERT INTO `categorize` VALUES (16,6);
+INSERT INTO `categorize` VALUES (23,6);
 INSERT INTO `categorize` VALUES (5,7);
 INSERT INTO `categorize` VALUES (14,7);
 INSERT INTO `categorize` VALUES (16,7);
@@ -173,6 +178,7 @@ INSERT INTO `categorize` VALUES (16,20);
 INSERT INTO `categorize` VALUES (20,21);
 INSERT INTO `categorize` VALUES (21,22);
 INSERT INTO `categorize` VALUES (21,23);
+INSERT INTO `categorize` VALUES (24,23);
 INSERT INTO `categorize` VALUES (22,24);
 INSERT INTO `categorize` VALUES (22,25);
 /*!40000 ALTER TABLE `categorize` ENABLE KEYS */;
@@ -526,6 +532,8 @@ INSERT INTO `library` VALUES (1,19,'2022-03-30','2022-03-30',95,1886,95,1886,6.3
 INSERT INTO `library` VALUES (1,20,'2022-07-19','2022-07-19',95,1886,95,1886,4.2,NULL,'2022-07-19 20:34:14');
 INSERT INTO `library` VALUES (1,21,'2024-12-31','2024-12-31',95,1886,95,1886,9.1,NULL,'2024-12-31 14:27:54');
 INSERT INTO `library` VALUES (1,22,'2024-12-31','2024-12-31',95,1886,95,1886,10,NULL,'2024-12-31 15:16:26');
+INSERT INTO `library` VALUES (1,23,'2025-01-02','2025-01-02',95,1886,95,1886,10,NULL,'2025-01-02 23:52:26');
+INSERT INTO `library` VALUES (1,24,'2025-01-02','2025-01-02',95,1886,95,1886,8.1,NULL,'2025-01-02 23:54:10');
 /*!40000 ALTER TABLE `library` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2672,6 +2680,8 @@ INSERT INTO `written` VALUES (18,14);
 INSERT INTO `written` VALUES (19,15);
 INSERT INTO `written` VALUES (21,16);
 INSERT INTO `written` VALUES (22,17);
+INSERT INTO `written` VALUES (23,18);
+INSERT INTO `written` VALUES (24,19);
 /*!40000 ALTER TABLE `written` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -2684,4 +2694,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-02 23:42:54
+-- Dump completed on 2025-01-02 23:57:09
